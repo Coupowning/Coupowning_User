@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/keri_/Desktop/Coupowning/app/src/main/res/layout/activity_main.xml" value="0.1125" />
+        <entry key="..\:/Users/keri_/Desktop/Coupowning/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/keri_/Desktop/Coupowning/app/src/main/res/layout/fragment_tab_home.xml" value="0.23854166666666668" />
+        <entry key="..\:/Users/keri_/Desktop/Coupowning/app/src/main/res/layout/fragment_tab_map.xml" value="0.2513586956521739" />
+        <entry key="..\:/Users/keri_/Desktop/Coupowning/app/src/main/res/layout/fragment_tab_profile.xml" value="0.12335359675785208" />
+        <entry key="..\:/Users/keri_/Desktop/Coupowning/app/src/main/res/menu/menu_list.xml" value="0.2" />
       </map>
     </option>
   </component>
