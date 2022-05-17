@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar) // toolBar를 통해 App Bar 생성
         setSupportActionBar(toolbar) // 커스텀 액션바 적용
         changeFragment(tabHomeFragment)
+        getSupportActionBar()!!.setTitle(null)
     }
     private fun initNavigation() { // 탭메뉴 생성
         bnv_main.setSelectedItemId(R.id.tab_home);
