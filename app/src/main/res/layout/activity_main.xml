@@ -38,6 +38,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
                     android:text="@string/app_name"
+                    android:fontFamily="@font/suncheonb"
                     android:textColor="@color/black"
                     android:textSize="15dp" />
         </androidx.appcompat.widget.Toolbar>
