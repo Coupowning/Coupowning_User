@@ -6,4 +6,7 @@
     <font android:fontStyle="normal"
         android:fontWeight="400"
         android:font="@font/suncheonb"/>
+    <font android:fontStyle="normal"
+        android:fontWeight="400"
+        android:font="@font/nanumgothicbold"/>
 </font-family>

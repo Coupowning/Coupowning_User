@@ -4,4 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TabHomeFragment">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:padding="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
 </FrameLayout>
