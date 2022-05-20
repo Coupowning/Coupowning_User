@@ -1,8 +1,10 @@
 package kr.ac.coukingmama.userapp
 
+import android.Manifest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -10,6 +12,8 @@ class MainActivity : AppCompatActivity() {
     private val tabMapFragment by lazy { TabMapFragment() }
     private val tabHomeFragment by lazy { TabHomeFragment() }
     private val tabProfileFragment by lazy { TabProfileFragment() }
+    private val LOCATION_PERMISSION_REQUEST_CODE: Int = 1000
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,6 +21,8 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar) // toolBar를 통해 App Bar 생성
         setSupportActionBar(toolbar) // 커스텀 액션바 적용
         changeFragment(tabHomeFragment)
+        getSupportActionBar()!!.setTitle(null)
+        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
     }
     private fun initNavigation() { // 탭메뉴 생성
         bnv_main.setSelectedItemId(R.id.tab_home);

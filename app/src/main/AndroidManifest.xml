@@ -2,7 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="kr.ac.coukingmama.userapp">
-
     <application
 
         tools:replace="android:appComponentFactory"
@@ -13,9 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Coupowning">
-        <meta-data
-            android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="CLIENT_ID"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,6 +21,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <meta-data
+            android:name="com.naver.maps.map.CLIENT_ID"
+            android:value="CLIENT_ID" />
+        <activity android:name=".InquireStoreActivity"/>
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 </manifest>
