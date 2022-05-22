@@ -5,4 +5,6 @@
     <string name="tab_profile">Profile</string>
     <string name="tab_map">Map</string>
     <string name="tab_home">Home</string>
+    <string name="store_view">가게보기</string>
+    <string name="history">적립내역</string>
 </resources>

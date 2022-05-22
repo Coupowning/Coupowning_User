@@ -39,52 +39,62 @@
                 </TableRow>
                 <TableRow android:layout_marginBottom="10dp">
                     <ImageView
+                        android:id="@+id/stamp_1"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
+                        android:id="@+id/stamp_2"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
+                        android:id="@+id/stamp_3"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
+                        android:id="@+id/stamp_4"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
+                        android:id="@+id/stamp_5"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:src="@drawable/ic_stamp_image"/>
                 </TableRow>
                 <TableRow>
                     <ImageView
+                        android:id="@+id/stamp_6"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
+                        android:id="@+id/stamp_7"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
+                        android:id="@+id/stamp_8"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
+                        android:id="@+id/stamp_9"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
+                        android:id="@+id/stamp_10"
                         android:layout_width="42dp"
                         android:layout_height="42dp"
                         android:src="@drawable/ic_emptystamp"/>
@@ -110,7 +120,7 @@
                     android:textSize="18dp"
                     android:text="카페 302"/>
                 <TextView
-                    android:id="@+id/storeLocation"
+                    android:id="@+id/storeAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/nanumgothicbold"
