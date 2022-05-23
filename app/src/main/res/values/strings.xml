@@ -4,7 +4,7 @@
     <string name="tab_home">Home</string>
     <string name="tab_profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="store_view">Store View</string>
     <string name="history">History</string>
+    <string name="logout">Logout</string>
 </resources>

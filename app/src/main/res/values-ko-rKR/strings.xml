@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">쿠포닝</string>
-    <string name="map">Map</string>
     <string name="tab_profile">Profile</string>
     <string name="tab_map">Map</string>
     <string name="tab_home">Home</string>
     <string name="store_view">가게보기</string>
     <string name="history">적립내역</string>
+    <string name="logout">로그아웃</string>
 </resources>

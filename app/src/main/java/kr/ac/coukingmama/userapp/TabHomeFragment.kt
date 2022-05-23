@@ -14,11 +14,7 @@ class TabHomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        button.setOnClickListener{
-            val intent = Intent(getActivity(), StampDetailActivity::class.java)
-            startActivity(intent)
 
-        }
         return inflater.inflate(R.layout.fragment_tab_home, container, false)
     }
 
