@@ -7,4 +7,6 @@
     <string name="store_view">가게보기</string>
     <string name="history">적립내역</string>
     <string name="logout">로그아웃</string>
+    <string name="kakao">카카오로 시작하기</string>
+    <string name="google">구글로 시작하기</string>
 </resources>

@@ -10,4 +10,6 @@
     <color name="pink_200">#FDE0E0</color>
     <color name="pink_500">#FDAAAA</color>
     <color name="pink_700">#F97C7C</color>
+    <color name="kakaoyellow">#FFFEE500</color>
+    <color name="kakaolabel">#FF191919</color>
 </resources>

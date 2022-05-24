@@ -7,4 +7,6 @@
     <string name="store_view">Store View</string>
     <string name="history">History</string>
     <string name="logout">Logout</string>
+    <string name="kakao">loginByKakao</string>
+    <string name="google">loginByGoogle</string>
 </resources>
