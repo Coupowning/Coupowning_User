@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
+    id 'com.google.gms.google-services'
+
 }
 
 android {
@@ -44,4 +46,9 @@ dependencies {
     implementation 'io.github.ParkSangGwon:tedpermission-rx3:3.3.0'
     // 네이버 지도 위치 추적
     implementation 'com.google.android.gms:play-services-location:19.0.1'
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:30.0.1')
+    // Add the dependency for the Firebase SDK for Google Analytics
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }
