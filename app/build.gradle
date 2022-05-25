@@ -16,6 +16,10 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures{
+        viewBinding true
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -44,4 +48,6 @@ dependencies {
     implementation 'io.github.ParkSangGwon:tedpermission-rx3:3.3.0'
     // 네이버 지도 위치 추적
     implementation 'com.google.android.gms:play-services-location:19.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
 }

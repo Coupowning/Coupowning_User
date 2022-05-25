@@ -1,6 +1,7 @@
 package kr.ac.coukingmama.userapp
 
 import android.Manifest
+import android.content.Context
 import android.content.Intent
 import android.graphics.Outline
 import android.graphics.drawable.Drawable
@@ -12,8 +13,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewOutlineProvider
-import android.widget.GridLayout
-import android.widget.ImageView
+import android.widget.*
 import androidx.annotation.NonNull
 import androidx.core.app.ActivityCompat
 import com.naver.maps.map.*
@@ -46,8 +46,10 @@ class TabMapFragment : Fragment(), OnMapReadyCallback {
         }
 
         locationSource = FusedLocationSource(this, LOCATION_PERMISSION_REQUEST_CODE)
+
         return view
     }
+
 
 @Override
     override fun onRequestPermissionsResult(requestCode:Int, @NonNull permissions:Array<String>,  @NonNull grantResults:IntArray) {
