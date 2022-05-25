@@ -7,13 +7,15 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
+import com.google.firebase.firestore.FirebaseFirestore
+import kotlinx.android.synthetic.main.activity_stamp_detail.*
 
 class MainActivity : AppCompatActivity() {
     private val tabMapFragment by lazy { TabMapFragment() }
     private val tabHomeFragment by lazy { TabHomeFragment() }
     private val tabProfileFragment by lazy { TabProfileFragment() }
     private val LOCATION_PERMISSION_REQUEST_CODE: Int = 1000
-
+    var firestore : FirebaseFirestore? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar) // 커스텀 액션바 적용
         changeFragment(tabHomeFragment)
         getSupportActionBar()!!.setTitle(null)
+        firestore = FirebaseFirestore.getInstance() // 파이어베이스 인스턴스 초기화
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
     }
     private fun initNavigation() { // 탭메뉴 생성
