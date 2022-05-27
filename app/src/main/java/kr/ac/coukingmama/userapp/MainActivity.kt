@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         getSupportActionBar()!!.setTitle(null)
         firestore = FirebaseFirestore.getInstance() // 파이어베이스 인스턴스 초기화
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
+
     }
     private fun initNavigation() { // 탭메뉴 생성
         bnv_main.setSelectedItemId(R.id.tab_home);
