@@ -16,11 +16,12 @@ class ProfileAdapter(private val context: Context) : RecyclerView.Adapter<Profil
         return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int = datas.size
+    override fun getItemCount(): Int {
+        return datas.size
+    }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = items[position]
-        holder.setItem(item)
+        holder.bind(datas[position])
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {

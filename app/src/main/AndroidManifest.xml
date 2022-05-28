@@ -23,7 +23,7 @@
         </activity>
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="ln1n8dqjhl" />
+            android:value="CLIENT_ID" />
         <activity android:name=".InquireStoreActivity"/>
     </application>
     <uses-permission android:name="android.permission.INTERNET" />
