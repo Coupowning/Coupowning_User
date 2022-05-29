@@ -15,14 +15,15 @@ import retrofit2.Response
 import java.util.ArrayList
 
 class HomeRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    lateinit var listener : OnItemClickListener
     var storeList =  ArrayList<StoreList>()
+
     fun setData(user: StoreList){
         storeList.add(user)
         notifyDataSetChanged()
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
@@ -53,13 +54,16 @@ class HomeRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             iv.setImageResource(R.drawable.ic_emptystamp)
         }
 
+        viewHolder.setOnClickListener {
+            listener!!.onItemClick(it, currentItem, position)
+        }
     }
 
     interface OnItemClickListener{
-        fun onItemClick(v:View, data: User, pos : Int)
+        fun onItemClick(v:View, data: StoreList, pos : Int)
     }
-    private var listener : AdapterView.OnItemClickListener? = null
-    fun setOnItemClickListener(listener : AdapterView.OnItemClickListener) {
+
+    fun setOnItemClickListener(listener : OnItemClickListener) {
         this.listener = listener
     }
 }

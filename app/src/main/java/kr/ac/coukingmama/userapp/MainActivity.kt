@@ -8,7 +8,6 @@ import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_stamp_detail.*
 
 class MainActivity : AppCompatActivity() {
     private val tabMapFragment by lazy { TabMapFragment() }
@@ -26,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar) // toolBar를 통해 App Bar 생성
         bundle.putString("userId", "${userId}")
         tabHomeFragment.arguments = bundle
+        tabProfileFragment.arguments = bundle
 
         setSupportActionBar(toolbar) // 커스텀 액션바 적용
         changeFragment(tabHomeFragment)
