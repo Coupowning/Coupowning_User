@@ -14,8 +14,8 @@ import java.util.*
 class HistoryRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     var historyList = ArrayList<History>()
 
-    fun setData(history: History) {
-        historyList.add(history)
+    fun setData(loc: Int, history: History) {
+        historyList.add(loc, history)
         notifyDataSetChanged()
     }
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -33,11 +33,13 @@ class HistoryRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         var viewHolder = (holder as ViewHolder).itemView
         var currentItem = historyList[position]
-        var Sformat = SimpleDateFormat("YYYY년 MM월 DD일" )
-        val ndate : java.util.Date = Date(((currentItem.date._seconds)  * 1000) +
-                (currentItem.date._nanoseconds) / 1000000)
-        val date = Sformat.format(ndate)
-        viewHolder.historyDate.text = date.toString()
+        var str_sub = currentItem.date.substring(0 until 10)
+        var token = StringTokenizer(str_sub, "-")
+        var date = token.nextToken() + "년 "
+        date += token.nextToken() + "월 "
+        date += token.nextToken() + "일 "
+
+        viewHolder.historyDate.text = date
         viewHolder.historyNum.text = currentItem.amount.toString()
     }
 }

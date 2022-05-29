@@ -3,6 +3,7 @@ package kr.ac.coukingmama.userapp
 import android.Manifest
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
@@ -26,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         bundle.putString("userId", "${userId}")
         tabHomeFragment.arguments = bundle
         tabProfileFragment.arguments = bundle
-
         setSupportActionBar(toolbar) // 커스텀 액션바 적용
         changeFragment(tabHomeFragment)
         getSupportActionBar()!!.setTitle(null)

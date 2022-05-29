@@ -52,7 +52,7 @@ class StampDetailActivity : AppCompatActivity() {
         recyclerview.adapter = adapter
         recyclerview.layoutManager = LinearLayoutManager(this)
         history.forEach {
-            adapter.setData(it)
+            adapter.setData(0, it)
             Log.d("history", it.toString())
         }
 

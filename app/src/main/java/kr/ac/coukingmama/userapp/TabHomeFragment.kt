@@ -2,6 +2,7 @@ package kr.ac.coukingmama.userapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,11 +35,10 @@ class TabHomeFragment : Fragment() {
         val userViewModelFactory = UserViewModelFactory(userRepository)
 
         userViewModel = ViewModelProvider(this,userViewModelFactory).get(UserViewModel::class.java)
-//        userViewModel.getUser("${userId}")
-        userViewModel.getUser("33@33")
+        userViewModel.getUser("${userId}")
         userViewModel.myResponse.observe(viewLifecycleOwner, Observer {
             it.body()!!.storeList.forEach {
-                adapter.setData(it)
+                adapter.setData(0, it)
             }
         })
 
@@ -46,6 +46,7 @@ class TabHomeFragment : Fragment() {
             override fun onItemClick(v: View, data: StoreList, pos: Int) {
                 val intent = Intent(activity, StampDetailActivity::class.java)
                 intent.putExtra("storelist", data)
+                Log.d("stamp", data.toString())
                 startActivity(intent)
             }
         })

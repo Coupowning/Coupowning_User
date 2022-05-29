@@ -18,8 +18,8 @@ class HomeRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     lateinit var listener : OnItemClickListener
     var storeList =  ArrayList<StoreList>()
 
-    fun setData(user: StoreList){
-        storeList.add(user)
+    fun setData(loc: Int, user: StoreList){
+        storeList.add(loc, user)
         notifyDataSetChanged()
     }
 

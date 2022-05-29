@@ -4,11 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.google.firebase.Timestamp
 import com.kakao.sdk.auth.model.OAuthToken
 import com.kakao.sdk.user.UserApiClient
 import kotlinx.android.synthetic.main.activity_login.*
 import kr.ac.coukingmama.userapp.data.*
-import kr.ac.coukingmama.userapp.data.user.Date
 import kr.ac.coukingmama.userapp.data.user.History
 import kr.ac.coukingmama.userapp.data.user.StoreList
 import kr.ac.coukingmama.userapp.data.user.User
@@ -19,6 +19,7 @@ import retrofit2.Response
 class LoginActivity : AppCompatActivity() {
     lateinit var userId: String
     val service = RetrofitClient.apiService
+    lateinit var timeStamp : Timestamp
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -41,8 +42,8 @@ class LoginActivity : AppCompatActivity() {
                 userId = user!!.id.toString()
                 val data = User("${userId}",
                     listOf(StoreList(0,null,null,null,null
-                        , listOf(History(
-                            Date(0,0), 0),),)
+                        , listOf(History
+                            ("timeStamp", 0),),)
                     )
                 )
                 service.createUser(data).enqueue(object : Callback<User> {

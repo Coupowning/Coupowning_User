@@ -231,7 +231,7 @@
             android:id="@+id/recyclerview"
             android:paddingTop="15dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="300dp"
             />
     </LinearLayout>
         </LinearLayout>
