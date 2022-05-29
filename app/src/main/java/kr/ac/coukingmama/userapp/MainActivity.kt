@@ -16,11 +16,17 @@ class MainActivity : AppCompatActivity() {
     private val tabProfileFragment by lazy { TabProfileFragment() }
     private val LOCATION_PERMISSION_REQUEST_CODE: Int = 1000
     var firestore : FirebaseFirestore? = null
+    var userId: String? = null
+    var bundle = Bundle()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         initNavigation()
+        userId = intent.getStringExtra("userId").toString()
         val toolbar: Toolbar = findViewById(R.id.toolbar) // toolBar를 통해 App Bar 생성
+        bundle.putString("userId", "${userId}")
+        tabHomeFragment.arguments = bundle
+
         setSupportActionBar(toolbar) // 커스텀 액션바 적용
         changeFragment(tabHomeFragment)
         getSupportActionBar()!!.setTitle(null)

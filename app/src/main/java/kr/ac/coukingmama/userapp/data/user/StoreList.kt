@@ -9,5 +9,5 @@ data class StoreList(
     @SerializedName("storeName") var storeName:String?,
     @SerializedName("storeLocation") var storeLocation:String?,
     @SerializedName("storeEvent") var storeEvent:String?,
-    @SerializedName("history") var history: History
+    @SerializedName("history") var history: List<History>
 )

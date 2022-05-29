@@ -5,6 +5,6 @@ import kr.ac.coukingmama.userapp.data.user.StoreList
 
 data class User (
     @SerializedName("userId") var userId:String,
-    @SerializedName("storeList") var storeList: StoreList
+    @SerializedName("storeList") var storeList: List<StoreList>
 
 )
