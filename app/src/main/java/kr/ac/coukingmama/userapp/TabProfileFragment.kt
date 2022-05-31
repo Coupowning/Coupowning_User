@@ -52,7 +52,7 @@ class TabProfileFragment : Fragment() {
         view.apply {
             val multiFormatWriter = MultiFormatWriter()
             val bitMatrix: BitMatrix =
-                multiFormatWriter.encode(byteEncryptedText.toString(), BarcodeFormat.QR_CODE, 200, 200)
+                multiFormatWriter.encode(String(Base64.encode(byteEncryptedText,Base64.DEFAULT)), BarcodeFormat.QR_CODE, 200, 200)
             val barcodeEncoder = BarcodeEncoder()
             val bitmap: Bitmap = barcodeEncoder.createBitmap(bitMatrix)
             img.setImageBitmap(bitmap)
