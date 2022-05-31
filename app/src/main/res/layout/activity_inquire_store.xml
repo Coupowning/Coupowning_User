@@ -201,13 +201,7 @@
                     android:layout_marginLeft="10dp"
                     android:fontFamily="@font/nanumgothicbold"
                     android:textColor="#000000"/>
-
             </LinearLayout>
-
         </LinearLayout>
-
-
     </LinearLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
