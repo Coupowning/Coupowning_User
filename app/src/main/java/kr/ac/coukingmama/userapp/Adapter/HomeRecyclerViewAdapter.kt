@@ -1,22 +1,26 @@
 package kr.ac.coukingmama.userapp.Adapter
 
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+import android.net.Uri
+import android.os.Build
+import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.view.View
-import android.widget.AdapterView
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.gun0912.tedpermission.provider.TedPermissionProvider.context
 import kotlinx.android.synthetic.main.coupon_item_list.view.*
 import kr.ac.coukingmama.userapp.R
 import kr.ac.coukingmama.userapp.data.user.StoreList
-import kr.ac.coukingmama.userapp.data.user.User
-import retrofit2.Call
-import retrofit2.Response
 import java.util.ArrayList
 
 class HomeRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     lateinit var listener : OnItemClickListener
     var storeList =  ArrayList<StoreList>()
+
 
     fun setData(loc: Int, user: StoreList){
         storeList.add(loc, user)
@@ -57,6 +61,10 @@ class HomeRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
         viewHolder.setOnClickListener {
             listener!!.onItemClick(it, currentItem, position)
         }
+
+        Glide.with(context).asBitmap().load(currentItem.storeImage).centerCrop().into(viewHolder.storeImage!!)
+
+
     }
 
     interface OnItemClickListener{
@@ -66,4 +74,6 @@ class HomeRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     fun setOnItemClickListener(listener : OnItemClickListener) {
         this.listener = listener
     }
+
+
 }

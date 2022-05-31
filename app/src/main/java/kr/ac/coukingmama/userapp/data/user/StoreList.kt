@@ -11,6 +11,7 @@ data class StoreList(
     @SerializedName("storeId") var storeId:String?,
     @SerializedName("storeName") var storeName:String?,
     @SerializedName("storeLocation") var storeLocation:String?,
+    @SerializedName("storeImage") var storeImage:String?,
     @SerializedName("storeEvent") var storeEvent:String?,
     @SerializedName("history") var history: List<History>
 ) : Serializable

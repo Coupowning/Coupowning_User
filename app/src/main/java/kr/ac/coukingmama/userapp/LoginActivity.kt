@@ -41,7 +41,7 @@ class LoginActivity : AppCompatActivity() {
             UserApiClient.instance.me { user, error ->
                 userId = user!!.id.toString()
                 val data = User("${userId}",
-                    listOf(StoreList(0,null,null,null,null
+                    listOf(StoreList(0,null,null,null,null,null
                         , listOf(History
                             ("timeStamp", 0),),)
                     )

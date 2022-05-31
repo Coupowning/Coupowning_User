@@ -35,7 +35,8 @@ class TabHomeFragment : Fragment() {
         val userViewModelFactory = UserViewModelFactory(userRepository)
 
         userViewModel = ViewModelProvider(this,userViewModelFactory).get(UserViewModel::class.java)
-        userViewModel.getUser("${userId}")
+//        userViewModel.getUser("${userId}")
+        userViewModel.getUser("33@33")
         userViewModel.myResponse.observe(viewLifecycleOwner, Observer {
             it.body()!!.storeList.forEach {
                 adapter.setData(0, it)
