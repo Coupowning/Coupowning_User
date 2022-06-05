@@ -1,23 +1,10 @@
-package kr.ac.coukingmama.userapp.data.cafe
+package kr.ac.coukingmama.userapp.data.store
 
-import androidx.lifecycle.LiveData
+import kr.ac.coukingmama.userapp.data.RetrofitClient
+import retrofit2.Response
 
-class CafeRepository(private val postDao: CafeDAO)  {
-    val readAllPost: LiveData<List<Cafe>> = postDao.getAll()
-    val getCount: LiveData<Int>? = postDao.getCount()
-
-    suspend fun addPost(post:Cafe){
-        postDao.insert(post)
+class StoreRepository {
+    suspend fun getStore(): Response<List<Store>> {
+        return RetrofitClient.apiService.getStore()
     }
-
-    fun deletePost(id:Int){
-        postDao.deleteById(id)
-    }
-
-    suspend fun updatePost(post:Cafe){
-        postDao.update(post)
-    }
-
-
-
 }

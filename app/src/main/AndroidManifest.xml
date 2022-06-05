@@ -4,6 +4,7 @@
     package="kr.ac.coukingmama.userapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -49,8 +50,9 @@
             android:exported="false" />
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="ln1n8dqjhl" />
-<activity android:name=".InquireStoreActivity"/>
+            android:value="CLIENT_ID" />
+        <activity
+            android:name=".StoreDetailActivity" />
         <activity
             android:name=".TabMapFragment"
             tools:ignore="Instantiatable" />

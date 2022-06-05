@@ -1,6 +1,6 @@
 package kr.ac.coukingmama.userapp.data
 
-import kr.ac.coukingmama.userapp.data.user.StoreList
+import kr.ac.coukingmama.userapp.data.store.Store
 import kr.ac.coukingmama.userapp.data.user.User
 import retrofit2.Call
 import retrofit2.Response
@@ -13,6 +13,7 @@ interface Network {
 
     @GET("user/{userId}")
     suspend fun getUser(@Path("userId") userId:String): Response<User>
+
+    @GET("stores")
+    suspend fun getStore(): Response<List<Store>>
 }
-
-

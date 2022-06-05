@@ -60,7 +60,7 @@
             android:layout_margin="30dp">
 
             <TextView
-                android:id="@+id/cafeName"
+                android:id="@+id/storeName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="카페 302"
@@ -83,7 +83,7 @@
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/cafeProfitMenu"
+                    android:id="@+id/storeProfitMenu"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="10개 아메리카노 한 잔"
@@ -109,7 +109,7 @@
                     android:textColor="@color/black"/>
 
                 <TextView
-                    android:id="@+id/cafeAddress"
+                    android:id="@+id/storeAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:hint="경기도 시흥시 정왕동 1739-5 KR 2층"

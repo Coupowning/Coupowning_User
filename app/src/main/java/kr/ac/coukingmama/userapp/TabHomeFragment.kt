@@ -16,7 +16,7 @@ import kr.ac.coukingmama.userapp.data.user.*
 
 
 class TabHomeFragment : Fragment() {
-    private lateinit var userViewModel : UserViewModel
+    private lateinit var userViewModel: UserViewModel
     var userId: String? = null
 
     override fun onCreateView(
@@ -34,7 +34,7 @@ class TabHomeFragment : Fragment() {
         val userRepository = UserRepository()
         val userViewModelFactory = UserViewModelFactory(userRepository)
 
-        userViewModel = ViewModelProvider(this,userViewModelFactory).get(UserViewModel::class.java)
+        userViewModel = ViewModelProvider(this, userViewModelFactory).get(UserViewModel::class.java)
 //        userViewModel.getUser("${userId}")
         userViewModel.getUser("33@33")
         userViewModel.myResponse.observe(viewLifecycleOwner, Observer {
@@ -43,7 +43,7 @@ class TabHomeFragment : Fragment() {
             }
         })
 
-        adapter.setOnItemClickListener(object: HomeRecyclerViewAdapter.OnItemClickListener{
+        adapter.setOnItemClickListener(object : HomeRecyclerViewAdapter.OnItemClickListener {
             override fun onItemClick(v: View, data: StoreList, pos: Int) {
                 val intent = Intent(activity, StampDetailActivity::class.java)
                 intent.putExtra("storelist", data)
@@ -53,7 +53,4 @@ class TabHomeFragment : Fragment() {
         })
         return view
     }
-
-
 }
-

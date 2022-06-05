@@ -2,30 +2,33 @@ package kr.ac.coukingmama.userapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlinx.android.synthetic.main.activity_inquire_store.*
+import kotlinx.android.synthetic.main.activity_store_detail.*
+import kotlinx.android.synthetic.main.activity_store_detail.storeName
 import kr.ac.coukingmama.userapp.Adapter.StoreProfileAdapter
 import kr.ac.coukingmama.userapp.data.store.StoreProfile
-import kr.ac.coukingmama.userapp.data.store.StoreViewModel
-import kr.ac.coukingmama.userapp.databinding.ActivityInquireStoreBinding
+import kr.ac.coukingmama.userapp.databinding.ActivityStoreDetailBinding
 
-class InquireStoreActivity : AppCompatActivity() {
+class StoreDetailActivity : AppCompatActivity() {
     lateinit var storeProfileAdapter: StoreProfileAdapter
-    lateinit var binding: ActivityInquireStoreBinding
+    lateinit var binding: ActivityStoreDetailBinding
     private lateinit var backArrow: ImageView
     val datas = mutableListOf<StoreProfile>()
-    private lateinit var mPostViewModel: StoreViewModel
+
+    var StoreName : String? = null
+    var StoreDesc: String? = null
+    var LocationKr: String? = null
+    lateinit var StoreImage:ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityInquireStoreBinding.inflate(layoutInflater)
+        binding = ActivityStoreDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        mPostViewModel = ViewModelProvider(this).get(StoreViewModel::class.java)
-
         initRecycler()
+
         backArrow = findViewById(R.id.backArrow)
         backArrow.setOnClickListener {
             finish()
@@ -36,16 +39,22 @@ class InquireStoreActivity : AppCompatActivity() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         binding.recyclerView.adapter = storeProfileAdapter
 
-        datas.apply {
-            add(StoreProfile(img = R.drawable.coffee_pic))
-            add(StoreProfile(img = R.drawable.coffee_pic))
-            add(StoreProfile(img = R.drawable.coffee_pic))
-            add(StoreProfile(img = R.drawable.coffee_pic))
-            add(StoreProfile(img = R.drawable.coffee_pic))
+        StoreImage = intent.getStringArrayListExtra("storeImage")!!
+        StoreName = intent.getStringExtra("storeName")
+        StoreDesc = intent.getStringExtra("storeDesc")
+        LocationKr = intent.getStringExtra("locationKr")
 
+        datas.apply {
+            StoreImage.forEach {
+                x->
+                datas.add(StoreProfile(image = x))
+            }
             storeProfileAdapter.datas = datas
             storeProfileAdapter.notifyDataSetChanged()
-
         }
+
+        storeName.setText(StoreName.toString())
+        storeProfitMenu.setText(StoreDesc.toString())
+        storeAddress.setText(LocationKr.toString())
     }
 }

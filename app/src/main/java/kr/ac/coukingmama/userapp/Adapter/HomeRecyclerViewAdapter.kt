@@ -62,7 +62,7 @@ class HomeRecyclerViewAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder>() {
             listener!!.onItemClick(it, currentItem, position)
         }
 
-        Glide.with(context).asBitmap().load(currentItem.storeImage).centerCrop().into(viewHolder.storeImage!!)
+        Glide.with(context).asBitmap().load(currentItem.storeImage).into(viewHolder.storeImage!!)
 
 
     }

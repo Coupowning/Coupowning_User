@@ -1,5 +1,5 @@
-package kr.ac.coukingmama.userapp.data.cafe
+package kr.ac.coukingmama.userapp.data.store
 
-data class CafeProfile (
-    val img : Int
+data class StoreProfile(
+    val image: String
 )

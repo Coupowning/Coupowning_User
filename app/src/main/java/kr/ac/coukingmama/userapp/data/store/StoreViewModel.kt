@@ -1,39 +1,17 @@
-package kr.ac.coukingmama.userapp.data.cafe
+package kr.ac.coukingmama.userapp.data.store
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import retrofit2.Response
 
-class CafeViewModel(application: Application): AndroidViewModel(application)  {
+class StoreViewModel(private val repository: StoreRepository) : ViewModel() {
+    val myResponse: MutableLiveData<Response<List<Store>>> = MutableLiveData()
 
-    val readAllPost: LiveData<List<Cafe>>
-    val getCount: LiveData<Int>?
-    private val repository: CafeRepository
-
-    init {
-        val postDao = CafeAppDatabase.getDatabase(application)!!.CafeDAO()
-        repository = CafeRepository(postDao)
-        readAllPost = repository.readAllPost
-        getCount = repository.getCount
-    }
-    fun addPost(cafe:Cafe){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.addPost(cafe)
-        }
-    }
-
-    fun deletePost(id:Int){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.deletePost(id)
-        }
-    }
-
-    fun updatePost(cafe:Cafe){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.updatePost(cafe)
+    fun getStore() {
+        viewModelScope.launch(Dispatchers.Main) {
+            val response = repository.getStore()
+            myResponse.value = response
         }
     }
 }

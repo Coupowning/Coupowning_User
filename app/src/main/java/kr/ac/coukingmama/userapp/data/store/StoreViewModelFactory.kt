@@ -1,4 +1,10 @@
-package kr.ac.coukingmama.userapp.data.cafe
+package kr.ac.coukingmama.userapp.data.store
 
-class CafeViewModelFactory {
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+
+class StoreViewModelFactory (private val repository: StoreRepository) : ViewModelProvider.Factory{
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
+        return StoreViewModel(repository) as T
+    }
 }
