@@ -35,8 +35,7 @@ class TabHomeFragment : Fragment() {
         val userViewModelFactory = UserViewModelFactory(userRepository)
 
         userViewModel = ViewModelProvider(this, userViewModelFactory).get(UserViewModel::class.java)
-//        userViewModel.getUser("${userId}")
-        userViewModel.getUser("33@33")
+        userViewModel.getUser("${userId}")
         userViewModel.myResponse.observe(viewLifecycleOwner, Observer {
             it.body()!!.storeList.forEach {
                 adapter.setData(0, it)
@@ -47,7 +46,6 @@ class TabHomeFragment : Fragment() {
             override fun onItemClick(v: View, data: StoreList, pos: Int) {
                 val intent = Intent(activity, StampDetailActivity::class.java)
                 intent.putExtra("storelist", data)
-                Log.d("stamp", data.toString())
                 startActivity(intent)
             }
         })
