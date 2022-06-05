@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="25dp"
+    android:padding="15dp"
     tools:context=".TabProfileFragment">
     <ScrollView
         android:layout_width="wrap_content"
@@ -21,13 +21,13 @@
             android:layout_marginBottom="40dp"
             >
             <View
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
                 android:background="@drawable/qr_round"/>
             <ImageView
                 android:id="@+id/qr_image"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
                 android:layout_gravity="center"
                  />
         </FrameLayout>

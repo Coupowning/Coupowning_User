@@ -107,6 +107,8 @@ class TabMapFragment : Fragment(), OnMapReadyCallback {
         this.naverMap = naverMap
         naverMap.locationSource = locationSource
         naverMap.locationTrackingMode = LocationTrackingMode.Follow
+        val uiSettings = naverMap.uiSettings
+        uiSettings.isLocationButtonEnabled = true
     }
 
     override fun onStart() {
