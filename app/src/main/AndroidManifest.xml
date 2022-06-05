@@ -49,8 +49,8 @@
             android:exported="false" />
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="CLIENT_ID" />
-
+            android:value="ln1n8dqjhl" />
+<activity android:name=".InquireStoreActivity"/>
         <activity
             android:name=".TabMapFragment"
             tools:ignore="Instantiatable" />

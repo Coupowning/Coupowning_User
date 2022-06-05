@@ -25,7 +25,7 @@ class SplashActivity : AppCompatActivity() {
     private fun isToken() {
         UserApiClient.instance.accessTokenInfo { tokenInfo, error ->
             if (error != null) { // 캐시에 토큰이 존재하지 않으면 로그인 페이지로 이동
-                val intent = Intent(this, LoginActivity::class.java)
+                val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
             } else if (tokenInfo != null) { // 캐시에 토큰이 존재하면 메인 페이지로 이동
                 val intent = Intent(getApplication(), MainActivity::class.java)
