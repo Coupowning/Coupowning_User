@@ -61,9 +61,6 @@ class StampDetailActivity : AppCompatActivity() {
             adapter.setData(0, it)
         }
 
-        storeView.setOnClickListener {
-            TODO("가게보기 클릭 시 가게 페이지로 이동 구현")
-        }
         dBackBt.setOnClickListener {
             finish()
         }

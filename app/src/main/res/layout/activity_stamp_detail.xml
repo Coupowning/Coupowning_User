@@ -58,7 +58,7 @@
                 android:fontFamily="@font/suncheonb"
                 android:textColor="@color/black"
                 android:textSize="22dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="10dp"
                 android:text="카페 302"/>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -103,24 +103,6 @@
                     android:singleLine="true"
                     android:text="경기도 시흥시 정왕동"
                     android:textSize="13dp" />
-            </LinearLayout>
-            <LinearLayout
-                android:id="@+id/storeView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/nanumgothicbold"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/store_view"/>
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"/>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

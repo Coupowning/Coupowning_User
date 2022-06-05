@@ -98,7 +98,6 @@ class TabMapFragment : Fragment(), OnMapReadyCallback {
             intent.putExtra("storeDesc", storeDesc)
             intent.putExtra("locationKr", locationKr)
             intent.putStringArrayListExtra("storeImage", storeImage)
-            Log.d("image", storeImage.toString())
             startActivity(intent)
             true
         }
