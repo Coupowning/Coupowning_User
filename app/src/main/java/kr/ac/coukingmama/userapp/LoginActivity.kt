@@ -17,9 +17,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
-    lateinit var userId: String
     val service = RetrofitClient.apiService
-    lateinit var timeStamp : Timestamp
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -39,13 +37,17 @@ class LoginActivity : AppCompatActivity() {
             Log.e("login","로그인 실패- $error")
         } else if (token != null) {
             UserApiClient.instance.me { user, error ->
-                userId = user!!.id.toString()
+                var userId = user!!.id.toString()
                 val data = User("${userId}",
                     listOf(StoreList(0,null,null,null,null,null
                         , listOf(History
                             ("timeStamp", 0),),)
                     )
                 )
+                val intent = Intent(getApplication(), MainActivity::class.java)
+                intent.putExtra("userId", userId)
+                startActivity(intent)
+                finish()
                 service.createUser(data).enqueue(object : Callback<User> {
                     override fun onResponse(call: Call<User>, response: Response<User>) {
                         if(response.isSuccessful) { // 통신 성공
@@ -60,9 +62,7 @@ class LoginActivity : AppCompatActivity() {
                     }
                 })
             }
-            Log.d("login","로그인성공")
-            startActivity(Intent(getApplication(), MainActivity::class.java))
-            finish()
+
         }
     }
 

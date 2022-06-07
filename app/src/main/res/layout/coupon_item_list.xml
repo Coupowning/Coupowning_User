@@ -41,63 +41,63 @@
                 <TableRow android:layout_marginBottom="10dp">
                     <ImageView
                         android:id="@+id/stamp_1"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
                         android:id="@+id/stamp_2"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
                         android:id="@+id/stamp_3"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
                         android:id="@+id/stamp_4"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_stamp_image"/>
                     <ImageView
                         android:id="@+id/stamp_5"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/ic_stamp_image"/>
                 </TableRow>
                 <TableRow>
                     <ImageView
                         android:id="@+id/stamp_6"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
                         android:id="@+id/stamp_7"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
                         android:id="@+id/stamp_8"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
                         android:id="@+id/stamp_9"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:layout_marginRight="10dp"
                         android:src="@drawable/ic_emptystamp"/>
                     <ImageView
                         android:id="@+id/stamp_10"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/ic_emptystamp"/>
                 </TableRow>
             </TableLayout>

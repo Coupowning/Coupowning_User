@@ -36,7 +36,9 @@ class TabHomeFragment : Fragment() {
 
         userViewModel = ViewModelProvider(this, userViewModelFactory).get(UserViewModel::class.java)
         userViewModel.getUser("${userId}")
+        Log.d("userId", userId.toString())
         userViewModel.myResponse.observe(viewLifecycleOwner, Observer {
+            Log.d("userId", it.toString())
             it.body()!!.storeList.forEach {
                 adapter.setData(0, it)
             }
